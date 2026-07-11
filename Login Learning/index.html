@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Learning Technologiesrivalium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama Desktop Layout */
+        .desktop-card {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sisi Kiri: Banner Ungu */
+        .side-purple {
+            flex: 1;
+            background-color: #4834d4;
+            color: #ffffff;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .side-purple h2 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .side-purple p {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Sisi Kanan: Form & Logo */
+        .side-form {
+            flex: 1.2;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        form {
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-user {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 10px;
+            color: #4834d4;
+        }
+
+        .label-text {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .input-field {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #e0e0e0;
+            padding: 8px 10px;
+            text-align: center;
+            outline: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+            background: transparent;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-bottom-color: #4834d4;
+        }
+
+        .text-left-label {
+            width: 100%;
+            text-align: left;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        /* Tombol Login */
+        .btn-submit {
+            margin-top: 15px;
+            background-color: #4834d4;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #3824c4;
+        }
+
+        /* Responsive untuk Layar HP */
+        @media (max-width: 768px) {
+            .desktop-card {
+                flex-direction: column;
+                max-width: 420px;
+            }
+
+            .side-purple, .side-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="desktop-card">
+        <div class="side-purple">
+            <h2>Room Learning<br>Technologiesrivalium</h2>
+            <p>Women's rights lawyer, founder of Girls for Arts International, cook, and proud mother of 2.</p>
+        </div>
+
+        <div class="side-form">
+            <img src="WhatsApp Image 2026-06-24 at 07.58.40.jpeg" alt="Logo" class="logo-img">
+
+            <form id="loginForm">
+                <svg class="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+
+                <div class="label-text">Username</div>
+                <input type="text" id="username" class="input-field" placeholder="Masukkan Username" required>
+                <div class="text-left-label">budi</div>
+
+                <div class="label-text">Password</div>
+                <input type="password" id="password" class="input-field" placeholder="Masukkan Password" required>
+                <div class="text-left-label">Donate</div>
+
+                <button type="submit" class="btn-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah form reload halaman
+
+            // Mengambil input dari pengguna
+            const inputUser = document.getElementById('username').value.trim();
+            const inputPass = document.getElementById('password').value.trim();
+
+            // Pengecekan Akun 1: User Utama
+            if (inputUser === "technolog" && inputPass === "rivalium") {
+                window.location.href = "https://rivalkalimutvalkmt.my.canva.site/technologyrivalium";
+            } 
+            // Pengecekan Akun 2: Room Guru
+            else if (inputUser === "room guru" && inputPass === "guru123") {
+                window.location.href = "https://rivalkalimutvalkmt.my.canva.site/room-guru-technologyrivalium";
+            } 
+            // Jika salah
+            else {
+                alert("Username atau Password salah! Silakan coba lagi.");
+            }
+        });
+    </script>
+
+</body>
+</html>
