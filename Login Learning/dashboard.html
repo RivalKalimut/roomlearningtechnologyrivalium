@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Technologiesrivalium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Latar belakang gradien biru/ungu sesuai gambar */
+            background: linear-gradient(135deg, #4d5bf7 0%, #3641c8 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* Logo Ikon Lingkaran Kiri Atas */
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-icon::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #4d5bf7;
+            clip-path: polygon(0 0, 100% 50%, 0 100%); /* Bentuk ikon segitiga/play */
+            margin-left: 3px;
+        }
+
+        /* Menu About Kanan Atas */
+        .nav-link {
+            color: #ffffff;
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        /* --- HERO CONTENT (TENGAH) --- */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: -20px;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.3px;
+            margin-bottom: 50px;
+        }
+
+        /* --- NAVIGASI TOMBOL (BAWAH) --- */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Tombol Transparan Garis Putih (Outline Pill Buttons) */
+        .btn-pill {
+            display: inline-block;
+            padding: 16px 40px;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 50px; /* Bentuk kapsul/oval */
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-pill:hover {
+            background-color: #ffffff;
+            color: #3641c8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Empty footer agar posisi rapi */
+        footer {
+            padding: 30px;
+        }
+
+        /* --- EFEK DEKORASI BOLA 3D DI BACKGROUND --- */
+        .bg-sphere {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(77, 91, 247, 0.1));
+            box-shadow: inset -10px -10px 30px rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+
+        .sphere-1 { width: 140px; height: 140px; top: 15%; right: 28%; }
+        .sphere-2 { width: 180px; height: 180px; bottom: 25%; right: 5%; }
+        .sphere-3 { width: 110px; height: 110px; bottom: 30%; left: 33%; }
+
+        /* Responsive untuk HP/Tablet */
+        @media (max-width: 768px) {
+            nav { padding: 20px; }
+            .hero-title { font-size: 38px; }
+            .hero-subtitle { font-size: 16px; margin-bottom: 35px; }
+            .button-group { flex-direction: column; width: 100%; gap: 15px; }
+            .btn-pill { width: 85%; max-width: 300px; padding: 14px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-sphere sphere-1"></div>
+    <div class="bg-sphere sphere-2"></div>
+    <div class="bg-sphere sphere-3"></div>
+
+    <nav>
+        <div class="logo-icon"></div>
+        <a href="#" class="nav-link">About</a>
+    </nav>
+
+    <main class="hero-section">
+        <h1 class="hero-title">Technologiesrivalium</h1>
+        <p class="hero-subtitle">room learning technologyrivalimum berbasis artificial intelegence</p>
+
+        <div class="button-group">
+            <a href="https://rivalkalimutvalkmt.my.canva.site/technologyrivalium" class="btn-pill">LEARNING ROOM</a>
+            <a href="#" class="btn-pill">MATERI LEARNING</a>
+            <a href="#" class="btn-pill">TUGAS LEARNING</a>
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>

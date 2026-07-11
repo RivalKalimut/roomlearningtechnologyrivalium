@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Guru - Technologiesrivalium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Latar belakang nuansa ruangan terang sesuai gambar */
+            background: linear-gradient(rgba(240, 242, 245, 0.8), rgba(240, 242, 245, 0.8)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: #1a1a3a;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+            width: 100%;
+        }
+
+        /* Logo Brand Kiri Atas */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 22px;
+            color: #1a1a3a;
+            letter-spacing: 1px;
+        }
+
+        .diamond-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #3b30d8;
+            transform: rotate(45deg);
+            border-radius: 4px;
+        }
+
+        /* Link About Kanan Atas */
+        .nav-link {
+            color: #1a1a3a;
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.7;
+        }
+
+        /* --- HERO CONTENT (TENGAH) --- */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: -30px;
+        }
+
+        .hero-title {
+            font-size: 58px;
+            font-weight: 900;
+            color: #100c5c;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace; /* Font monospace sesuai gambar */
+            color: #2b2b4e;
+            margin-bottom: 60px;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- NAVIGASI TOMBOL (BAWAH) --- */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .btn-pill {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 35px;
+            border: 2px solid #3b30d8;
+            border-radius: 50px;
+            color: #100c5c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            min-width: 200px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .btn-pill:hover {
+            background-color: #3b30d8;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(59, 48, 216, 0.25);
+        }
+
+        footer {
+            padding: 40px;
+        }
+
+        /* Responsive Layar HP */
+        @media (max-width: 768px) {
+            nav { padding: 20px 30px; }
+            .hero-title { font-size: 36px; }
+            .hero-subtitle { font-size: 14px; margin-bottom: 40px; }
+            .button-group { flex-direction: column; gap: 15px; }
+            .btn-pill { width: 90%; max-width: 320px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand-logo">
+            <div class="diamond-icon"></div>
+            <span>ROOM GURU</span>
+        </div>
+        <a href="#" class="nav-link">About</a>
+    </nav>
+
+    <main class="hero-section">
+        <h1 class="hero-title">Technologiesrivalium</h1>
+        <p class="hero-subtitle">room learning technologyrivalimum berbasis artificial intelegence</p>
+
+        <div class="button-group">
+            <a href="https://rivalkalimutvalkmt.my.canva.site/room-guru-technologyrivalium" class="btn-pill">LEARNING ROOM</a>
+            
+            <a href="#" class="btn-pill">
+                <span>UPLOAD</span>
+                <span>MATERI LEARNING</span>
+            </a>
+            
+            <a href="#" class="btn-pill">
+                <span>UPLOAD TUGAS</span>
+                <span>LEARNING</span>
+            </a>
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
